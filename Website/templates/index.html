@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: flex;
+            font-size: xx-large;
+            text-align: center;
+            flex-direction: column;
+        }
+    </style>
+</head>
+<body>
+    <form action="#" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{form}}
+        <input type="submit" value="Send"/>
+    </form>
+    {% if classes  %}
+    <div class="container">
+        <p>
+            <img src="data:image/png;base64,{{img}}" alt="" style="height: 50vh">
+        </p>
+        <p>This is {{classes}}</p>
+        <p>With {{confidences}}% confidence</p>
+    </div>
+    
+    {% endif %}
+</body>
+</html>

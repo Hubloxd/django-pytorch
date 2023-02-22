@@ -1,0 +1,7 @@
+django
+djangorestframework
+numpy
+requests
+pillow
+torch
+torchvision
